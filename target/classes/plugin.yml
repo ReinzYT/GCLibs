@@ -1,0 +1,8 @@
+name: GCLibs
+version: '1.0-SNAPSHOT'
+main: net.gammacube.gCLibs.GCLibs
+api-version: '1.21'
+prefix: GammaCube
+authors: [ ReinzYT (studio.gammacube.net) ]
+description: GammaCube Studio's Plugin
+website: studio.gammacube.net
