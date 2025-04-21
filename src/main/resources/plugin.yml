@@ -1,6 +1,6 @@
 name: GCLibs
 version: '1.0-SNAPSHOT'
-main: net.gammacube.gCLibs.GCLibs
+main: net.gammacube.GCLibs.GCLibs
 api-version: '1.21'
 prefix: GammaCube
 authors: [ ReinzYT (studio.gammacube.net) ]

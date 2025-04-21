@@ -1,4 +1,4 @@
-package net.gammacube.gCLibs.PacketHandler;
+package net.gammacube.GCLibs.PacketHandler;
 
 import com.github.retrooper.packetevents.PacketEvents;
 import com.github.retrooper.packetevents.protocol.entity.data.EntityData;

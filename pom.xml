@@ -28,21 +28,33 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.5.3</version>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
                 <executions>
                     <execution>
-                        <phase>package</phase>
+                        <phase>deploy</phase> <!-- You can use `install` if you don't want to deploy -->
                         <goals>
-                            <goal>shade</goal>
+                            <goal>run</goal>
                         </goals>
+                        <configuration>
+                            <tasks>
+                                <!-- Create target folder structure -->
+                                <mkdir dir="${project.basedir}/target/public/net/gammacube/GCLibs/1.0-SNAPSHOT" />
+
+                                <!-- Copy the JAR file -->
+                                <copy file="${project.build.directory}/${project.artifactId}-${project.version}.jar"
+                                      todir="${project.basedir}/target/public/net/gammacube/GCLibs/1.0-SNAPSHOT" />
+
+                                <!-- Copy the POM file -->
+                                <copy file="${project.basedir}/pom.xml"
+                                      todir="${project.basedir}/target/public/net/gammacube/GCLibs/1.0-SNAPSHOT" />
+                            </tasks>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
-            -->
         </plugins>
         <resources>
             <resource>
