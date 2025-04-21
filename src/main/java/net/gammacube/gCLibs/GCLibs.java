@@ -6,7 +6,7 @@ public final class GCLibs extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getLogger().info("GCLT");
+        getLogger().info("GCLTD");
     }
 
     @Override
